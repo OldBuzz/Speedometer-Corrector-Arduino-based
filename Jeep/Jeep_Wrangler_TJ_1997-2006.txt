@@ -1,0 +1,60 @@
+Jeep Wrangler TJ (1997-2006)
+----------------------------
+
+This Speedometer Corrector was originally intended for a 2005 Jeep TJ. It may
+work on other vehicles as-is, or it may need some tweaks.
+
+As far as I can determine, all years of Jeep TJs use the same VSS (Vehicle
+Speed Sensor), except for Rubicons, and possibly early 1997 models. And I
+believe they all use the same connectors at the VSS (Rubi and non-Rubi).
+
+The wire colors vary by year.
+
+This is what I was able to collect from the FSMs (Factory Service Manual),
+listing circuit name, wire gauge, wire color, by year:
+
+1997, 1998, 1999, 2000
+  FSM pg 8W-80-21 (1997) and 8W-30-12 (1998) and 8W-30-10 (1999) and 8W-80-38
+    (1998) and 8W-80-39 (1999), FSM pg 8W-30-10, 11, 8W-80-42 (2000)
+  Pin 3 = Vehicle Speed Sensor Signal from sensor to PCM = G7 18 or 20 WT/OR
+  Pin 2 = Ground from PCM = K167 20 BR/YL
+  Pin 1 = 5 Volt Supply from PCM = K6 18 or 20 VT/OR
+
+2001, 2002
+  FSM pg 8W-30-10 and 8W-30-11 and 8W-80-45 (2001) and 8W-80-40 (2002)
+  Pin 3 = Vehicle Speed Sensor Signal from sensor to PCM = G7 20 WT/OR
+  Pin 2 = Ground from PCM = K4 20 BK/LB
+  Pin 1 = 5 Volt Supply from PCM = K6 20 VT/OR
+
+2003, 2004
+  FSM pg 8W-30-10 and 8W-30-16 and 8W-80-50 (2003) and 8W-80-53 (2004)
+  Pin 3 = Vehicle Speed Sensor Signal from sensor to PCM = G7 18 or 20 WT/OR
+  Pin 2 = Ground from PCM = K4 20 BK/LB
+  Pin 1 = 5 Volt Supply from PCM = K6 18 or 20 VT/WT
+
+2005, 2006
+  FSM pg 8W-30-10 and 8W-30-15 and 8W-80-55 (2005) and 8W-80-59 (2006)
+  Pin 3 = Vehicle Speed Sensor Signal from sensor to PCM = K75 18 DB/OR
+  Pin 2 = Ground from PCM = K900 20 DB/DG
+  Pin 1 = 5 Volt Supply from PCM = F856 20 YL/PK
+
+You can splice into the wiring in the big cables at the firewall, or you can
+splice into the small cables over the transmission / transfer case. Or you can
+make a cable with a male and female connector to insert into the circuit at the
+Vehicle Speed Sensor, without cutting any vehicle wires.
+
+The Speedometer Corrector will need +5V and GND from the vehicle wiring. The
+Jeep TJ computer supplies regulated +5V to the VSS. Warning: Other vehicles may
+not provide the correct voltage. You'll have to run the +5V and GND wires from
+the Speedo Corrector to tee onto the appropriate wires.
+
+The VSS signal wire must be cut (unless you're using connectors to insert your
+wiring). The signal wire from the VSS goes to the input of the Speedometer
+Corrector, and the output from the Speedometer Corrector goes to the signal
+wire up to the computer (PCM/ECM).
+
+The drawing Speedo_Sensor_Wires.gif shows a simple diagram of the Jeep wiring,
+and how to splice in the Speedometer Corrector wires.
+
+The drawing Speedo_Corrector_Cable.gif shows how to wire a cable with
+automotive connectors, at the VSS, if you want to do it this way.
