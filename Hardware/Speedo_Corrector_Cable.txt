@@ -1,0 +1,20 @@
+Speedometer Corrector Cable
+---------------------------
+
+The 4-wire cable from the Speedo Corrector should use four different colors of
+wire for easy identification, and should be stranded 18 to 20 gauge.
+
+You can splice the cable into the wiring under the hood, or into the wiring
+over the transmission / transfer case. If you splice it in, you'll have to tee
+the +5V and GND wires, and you'll have to cut the signal wire. The wire from
+the sensor goes to the input of the Speed Corrector, and the output goes to the
+wire leading to the vehicle computer. A 4-pin waterproof automotive connector
+should be used to make it easy to remove the Speedo Corrector if needed.
+
+Alternatively, you can use a pair of matching 3-pin automotive connectors to
+link into the cable at the vehicle speed sensor. This way you do not have to
+cut into the vehicle wiring.
+
+See the Jeep folder for drawings.
+
+The Speedo Corrector may be mounted under the hood, or inside the cab.
