@@ -37,5 +37,8 @@ You'll have to acquire the parts and build it yourself.
 
 ## Related Projects
 
-Speedometer-Corrector-PIC-based: A PIC18F1320-based speedometer corrector circuit with C-source firmware. (Instead of making this Arduino-based one smaller, I designed a new one based on a PIC 18F1320. It's fairly similar hardware-wise, but the firmware is all new, because it uses an utterly different way of timing the sensor pulses. The PIC chip is available in surface mount, so the device can be made much smaller.)
+Speedometer-Corrector-PIC-based: A PIC18F1320-based speedometer corrector circuit with C-source firmware.
+
 https://github.com/OldBuzz/Speedometer-Corrector-PIC-based
+
+(Instead of making this Arduino-based one smaller, I designed a new one based on a PIC 18F1320. It's fairly similar hardware-wise, but the firmware is all new, because it uses a completely different way of timing the sensor pulses. The PIC chip is available in surface mount, so the device can be made much smaller.)
