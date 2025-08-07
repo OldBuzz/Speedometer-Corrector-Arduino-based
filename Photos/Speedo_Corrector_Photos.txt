@@ -1,0 +1,35 @@
+Speedometer Corrector Photos
+----------------------------
+
+For this initial version, I used point-to-point wiring on a sea-of-holes board,
+with screw terminals for the cable connection. This was a first experimental
+version, which turned out to work just fine without much tweaking.
+
+Notice that the markings on the red DIP switch were sanded off, since they were
+opposite of what is needed. The Arduino Pro Mini socket is made by butting
+6-pin female headers together, which requires sanding the ends.
+
+I used the 74HC14 Schmitt Trigger for a long time, but then realized it is not
+needed since the Arduino input pin has a Schmitt Trigger built in (see the
+jumper in the socket on Board_05.jpg).
+
+The board is not small, and it's in a bulky case. This could be made much
+smaller with a custom PCB, and without the 74HC14, and without the screw
+terminals.
+
+The optional cable has two automotive connectors matching the ones at the
+Vehicle Speed Sensor on the transfer case. This allows it to be connected into
+the system, and removed if needed, without altering the vehicle wiring.
+
+Alternatively, the cable could be spliced into the wiring under the hood, with
+no pricy connectors matching the vehicle. But a 4-pin waterproof automotive
+type connector is still recommended for easy removal.
+
+The DIP-switch must be oriented correctly (which will probably look wrong).
+The "ON" side should be where the wires connect to the Arduino, with the "OFF"
+side grounded. Be sure to get it right, or nothing will work. After soldering
+the DIP-switch onto the board, and verifing it is oriented correctly, sand off
+the markings. The 1-7 switches are now bit 0-6, and the 8 switch is now
+Increase/Decrease. The "ON" side now is zero, and the "OFF" side is now one.
+An open switch (off) allows the Arduino to pull the signal up, and a closed
+switch (on) pulls the signal to ground, hence the inverted logic.
