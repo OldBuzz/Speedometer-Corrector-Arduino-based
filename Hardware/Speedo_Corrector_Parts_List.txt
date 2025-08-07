@@ -1,0 +1,43 @@
+Speedometer Corrector Parts List
+--------------------------------
+
+1	Arduino Pro Mini (5V, 16MHz)
+1	74HC14, hex Schmitt Trigger (probably not needed)
+1   Socket, DIP, 14-pin (probably not needed)
+1   PN2222 transistor
+1	8-switch DIP
+1	Circuit board
+2	Capacitor, 0.1uF
+1	Capacitor, 0.01uF
+1	Capacitor, 22uF
+1   Resistor, 10 ohm, 1/4 watt
+1	Resistor, 1K
+1   Resistor, 4.7K
+1	Jumper
+1	Header, male 3-pin
+2   Header, female, 12-pin (for Arduino socket)
+1	Case
+1	Connectors, 3-pin, male & female, for Vehicle Speed Sensor & vehicle cable
+2	Screw terminal block, 2 pin
+
+The 74HC14 hex Schmitt Trigger, and its socket, are probably not needed.
+
+The DIP-switch markings will be opposite of how we will use it. The markings
+on the top should be sanded off to avoid confusion.
+
+The screw terminals can be eliminated if you solder the wires directly to the
+circuit board.
+
+The automotive connectors for the Vehicle Speed Sensor on the Jeep Wrangler TJ
+(1997-2006) are Aptiv (formerly Delphi) APEX 2.8 parts from Mouser. You may or
+may not need these connectors, depending on how you connect the Speedo
+Corrector to your vehicle. The part numbers seem to have changed, possibly more
+than once.
+  Connector housing, male    54200312  aka  15394689
+  Connector housing, female  54200308  aka  10757671
+  Connector pin, male        10762775-L  aka  54001801-L  or  54001801
+  Connector pin, female      10757690-L  aka  54001800
+
+A 4-pin automotive waterproof connector may be used to make the Speedo
+Corrector detachable. The AMP SuperSeal 1.5 series works well (apparently
+discontinued, but a variety of Chinese knock-offs are still sold on Amazon).
