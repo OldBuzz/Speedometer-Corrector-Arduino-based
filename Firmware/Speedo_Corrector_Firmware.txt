@@ -1,0 +1,41 @@
+Speedometer Corrector Firmware
+------------------------------
+
+This code came from Tom M'Guinness, the original designer. I made some minor
+changes, mainly to handle the DIP-switch inputs. I also renamed the variables
+as I worked through the code, trying to get a clear picture in my head. But
+it's still about 98% identical to Mr. M'Guinness's original code.
+
+It reads in the squarewave signal from the Vehicle Speed Sensor, measuring the
+time for a full cycle. It then calculates the output signal time, based on the
+correction factor you have set on the DIP-switches. It outputs that faster or
+slower squarewave to the vehicle computer.
+
+Note: Mr. M'Guinness has further developed his firmware for a commercial
+product he sells. He has put quite a bit of work into "managing the near-zero
+MPH zone so that it would keep registering speed all the way to zero, but not
+slowly pulse at stop signs". This code does not have any of that more advanced
+stuff. I have not noticed any funny stuff at zero and near-zero speeds, but it
+could happen.
+
+You'll have to burn the program into the Arduino.
+
+If you're using a Pro Mini, you'll need a USB-to-serial device. Be careful
+hooking it up, because there are 3 or 4 different pinouts for the Mini
+programming connector. How irritating.
+
+For a Nano or a Uno, with their built-in USB circuitry, you can just connect a
+cable to your computer. You'll need the Arduino IDE software (free) for
+Windows, macOS, or Linux.
+
+Warning: Many (most) Arduino boards are Chinese clones. Some brands of Mini use
+a large 2KB bootloader, which doesn't get along with a watchdog timer. Others
+use a small 512B bootloader which likes the watchdog timer just fine. If you
+have trouble, you might want to comment out the watchdog lines in the source
+code. In the 2+ years I've used this Speedometer Corrector, I don't think the
+watchdog has ever triggered a reset. The code is quite short, and there are
+very few places for it to get lost.
+
+If you don't know how to burn a program into an Arduino, you should get up to
+speed with the Arduino platform before trying this. The Arduino was invented
+for artists, of all things, so anyone can learn it.
