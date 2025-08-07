@@ -1,0 +1,66 @@
+Speedometer Corrector Calibration
+---------------------------------
+
+Speedometers, from the factory, are usually off a little, usually reading a
+little higher than your actual speed. A manufacturer wouldn't want any lawsuits
+from people getting speeding tickets because the speedometer says 50 when
+you're doing 53. And if you change your tire size or your gearing, your
+speedometer will be farther off, too high or too low.
+
+-----------
+Gather Data
+-----------
+Do this before installing the Speedo Corrector, or with it installed and
+jumpered for Bypass. Drive the vehicle, preferably on a flat straight highway,
+with little traffic, at a fairly high speed (a very steady 60 to 75 MPH). Write
+down the speedometer reading, and a GPS reading. Take multiple readings, a
+dozen or so, since they'll vary a little. An assistant is almost essential.
+
+---------------------------
+Calculate Correction Factor
+---------------------------
+Average all of the speedometer readings together, and average all of the GPS
+readings together.
+
+If the speedometer readings are lower than the GPS readings, you'll need an
+Increase (to the Speedo). Otherwise you'll need a Decrease.
+
+Divide the higher number by the lower, and subtract 1, and multiply by 100.
+That's the percent of change you need. For example: You get a speedometer
+reading of 60, and a GPS reading of 53.2. So you're going to need a Decrease
+(we'll get to that shortly), because you want to decrease the indicated speed
+on the speedometer. Divide the higher number, 60, by the lower, 53.2, and get
+1.1278. Subtract 1 giving 0.1278. Multiply by 100 giving 12.78. Round that to
+the nearest whole number giving 13. That's the percent of change you need.
+
+----------------
+Set DIP Switches
+----------------
+There are 8 switches on the DIP-switch. The left-most switch is the Increase/
+Decrease selector. Switch down is Decrease, switch up is Increase. Set it.
+
+The remaining 7 switches get the binary value of the correction factor you
+calculated above. Windows has a handy calculator with a Programmer option in
+the menu. Type in your value (like 13 from the example above), and it will show
+you the binary value (1101). Add some zeros to the left side of that to get 7
+digits (0001101). Enter that on the remaining 7 switches (switch up for 1, down
+for 0). Our example setting would be Decrease 13%.
+
+Set the Run/Bypass jumper to Run.
+
+-------------------
+Drive, Check, Tweak
+-------------------
+Go for a test drive with your helper. Check the speedometer against a GPS
+again.
+
+Your speedometer should now be correct, or close. You might need to tweak it a
+little. Use the calculator to find the binary numbers on either side of your
+calculated calibration factor, and set the switches accordingly.
+
+Note: The device only loads the calibration factor at power-up, so if you're
+changing the switches with the vehicle running, you'll have to power-cycle the
+device.
+
+If the speedometer is still way off, something is wrong, and you'll need to
+troubleshoot.
