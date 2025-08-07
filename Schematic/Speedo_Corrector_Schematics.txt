@@ -1,0 +1,23 @@
+Speedometer Corrector Schematics
+--------------------------------
+
+Two schematics are provided. The non-KiCad one is the original one, which
+includes a 74HC14 Hex Inverter with Schmitt-Trigger Inputs. The KiCad one is
+the same, but without the 74HC14 chip.
+
+The original design included this Schmitt Trigger buffer to clean up incoming
+signals. But the AVR ATmega328 chip on the Arduino Pro Mini (and Nano and Uno)
+has Schmitt Triggers on the input circuits. The characteristics between the
+AVR and the 74xx chip are a little different. After using the circuit with the
+74xx chip for a couple of years, I found that I didn't need it in my 2005 Jeep
+Wrangler. I removed the chip and jumpered across where the buffer had been
+(pin 1 to 2). But this may not be the case for all vehicles. The voltage levels
+and hysteresis is different between the two chips, do you might need the 74xx
+chip for a different vehicle.
+
+The Jeep supplies a regulated +5V to the Vehicle Speed Sensor, but a different
+vehicle may require the addition of a voltage regulator.
+
+The Jeep computer (PCM/ECM) internally pulls up the sensor signal with a 1K
+resistor. The transistor in this circuit is wired as open collector, to pull
+down the signal as needed. A different computer may need a different circuit.
