@@ -1,0 +1,60 @@
+Building the Speedometer Corrector
+----------------------------------
+
+This was built as a first prototype for a 2005 Jeep Wrangler. No effort was
+applied to making it small. The intention was to get it working, and then make
+a much smaller version on a real printed circuit board. It worked quite well
+from the start, and was used for over two years without a single glitch. It
+should be possible to shrink it quite a bit, if desired.
+
+The schematic shows an Arduino Pro Mini, but any AVR-based Arduino should work
+fine (Nano, Uno). The Mini was used because it is very small, and has no USB-
+to-Serial circuitry which is not needed in a permanent installation like this.
+But it requires an external USB-to-Serial connection to program it. The Nano
+and Uno have built-in USB circuitry. Arduinos based on ARM and other
+architectures have not been tested, and the differences in the way timing is
+handled may or may not cause problems. In any case, a high-powered high-speed
+CPU is of no benefit here.
+
+You can build this simple circuit on a sea-of-holes proto board, wiring it
+point-to-point. Or you can make a real PC board, but you'll have to lay it out
+yourself.
+
+The 74HC14 hex Schmitt Trigger is probably not needed, at least not for a Jeep
+TJ. The AVR MCU on the Arduino has built-in Schmitt Triggers. But their specs
+are different enough from the 74xx chip (different trigger voltages, different
+hysteresis) that some vehicles my let too much noise through without the 74xx
+chip.
+
+The DIP-switch must be oriented correctly (which will probably look wrong).
+The "ON" side should be where the wires connect to the Arduino, with the "OFF"
+side grounded. Be sure to get it right, or nothing will work. After soldering
+the DIP-switch onto the board, and verifing it is oriented correctly, sand off
+the markings. The 1-7 switches are now bit 0-6, and the 8 switch is now
+Increase/Decrease. The "ON" side now is zero, and the "OFF" side is now one.
+An open switch (off) allows the Arduino to pull the signal up, and a closed
+switch (on) pulls the signal to ground, hence the inverted logic.
+
+You can make a socket for the Arduino Pro Mini using female headers. If you
+can't find a pair of 12-pin female headers, you can butt 6-pin headers
+together, which will require sanding the ends. Using a socket makes it easy to
+remove the Arduino for programming.
+
+You don't have to use screw terminals for the cable connection, those were used
+in the prototype. You might want to solder your cable directly to the board.
+
+The Run/Bypass jumper is there "just in case". If anything ever goes wrong with
+the Arduino circuitry, you can move the jumper to Bypass, which connects the
+speed sensor directly to the vehicle computer, completely bypassing this
+circuit.
+
+If you're building this for a vehicle other than a Jeep TJ, you may have to
+change some things. This circuit depends on the regulated +5V from the vehicle
+computer. If your vehicle doesn't have that, you'll need to power it with a
+voltage regulator. If your sensor voltage is not 5V, you'll have to re-design
+the whole input/output circuitry. If your vehicle computer does not pull up the
+input line, you'll have to modify the open collector transistor driver circuit.
+
+There are Arduino Pro Mini models in 5V 16 MHz, and in 3.3V 8 MHz. This circuit
+uses the 5V one. Using a 3.3V one would require several circuit changes and
+firmware changes to get the timing right.
